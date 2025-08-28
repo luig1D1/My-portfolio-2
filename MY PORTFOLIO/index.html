@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>luis mikel - Personal Portfolio</title>
-
+    <title>Alazu Mikel- Personal Introduction</title>
     <style>
         * {
             margin: 0;
@@ -13,120 +12,91 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             line-height: 1.6;
             color: #333;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
             padding: 20px;
         }
 
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
         header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 20px 0;
-            border-radius: 15px;
-            margin-bottom: 30px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(45deg, #2c3e50, #34495e);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
         }
 
         nav {
-            text-align: center;
+            background: #34495e;
+            padding: 0;
         }
 
         nav ul {
             list-style: none;
-            display: inline-flex;
-            gap: 30px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav li {
+            margin: 0;
         }
 
         nav a {
+            display: block;
+            color: white;
             text-decoration: none;
-            color: #333;
-            font-weight: 600;
-            padding: 10px 20px;
-            border-radius: 25px;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
+            padding: 15px 25px;
+            transition: background 0.3s ease;
         }
 
         nav a:hover {
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            background: #2c3e50;
         }
 
-        .main-content {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
+        main {
             padding: 40px;
-            margin-bottom: 30px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
         }
 
-        .hero {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .profile-photo {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 48px;
-            font-weight: bold;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .subtitle {
-            font-size: 1.2em;
-            color: #666;
-            margin-bottom: 30px;
-        }
-
-        .section {
+        section {
             margin-bottom: 40px;
         }
 
-        .section h2 {
-            font-size: 1.8em;
+        h2 {
+            color: #2c3e50;
+            font-size: 2em;
             margin-bottom: 20px;
-            color: #333;
-            border-bottom: 3px solid #667eea;
+            border-bottom: 3px solid #3498db;
             padding-bottom: 10px;
         }
 
-        .intro-text {
+        p {
+            margin-bottom: 15px;
             font-size: 1.1em;
-            line-height: 1.8;
-            margin-bottom: 20px;
-            text-align: justify;
         }
 
-        .skills-grid {
+        .skills {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
@@ -134,81 +104,74 @@
         }
 
         .skill-card {
-            background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+            background: #f8f9fa;
             padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+            transition: transform 0.3s ease;
         }
 
         .skill-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
         .contact-info {
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            color: white;
+            background: #ecf0f1;
             padding: 30px;
-            border-radius: 15px;
-            text-align: center;
+            border-radius: 8px;
+            margin-top: 20px;
         }
 
         .contact-info h3 {
-            margin-bottom: 20px;
-            font-size: 1.5em;
+            color: #2c3e50;
+            margin-bottom: 15px;
         }
 
         .contact-links {
             display: flex;
-            justify-content: center;
             gap: 20px;
             flex-wrap: wrap;
         }
 
         .contact-links a {
-            color: white;
+            color: #3498db;
             text-decoration: none;
             padding: 10px 20px;
-            background: rgba(255, 255, 255, 0.2);
+            background: white;
             border-radius: 25px;
             transition: all 0.3s ease;
+            border: 2px solid #3498db;
         }
 
         .contact-links a:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: scale(1.05);
+            background: #3498db;
+            color: white;
+            transform: translateY(-2px);
         }
 
-        .hidden-page {
-            display: none;
-        }
-
-        .show-page {
-            display: block;
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
         }
 
         @media (max-width: 768px) {
-            .container {
-                padding: 10px;
-            }
-
             nav ul {
                 flex-direction: column;
-                gap: 10px;
             }
-
-            h1 {
+            
+            .contact-links {
+                justify-content: center;
+            }
+            
+            header h1 {
                 font-size: 2em;
             }
-
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-links {
-                flex-direction: column;
-                align-items: center;
+            
+            main {
+                padding: 20px;
             }
         }
     </style>
@@ -216,196 +179,104 @@
 <body>
     <div class="container">
         <header>
-            <nav>
-                <ul>
-                    <li><a href="#" onclick="showPage('home')">Home</a></li>
-                    <li><a href="#" onclick="showPage('about')">About</a></li>
-                    <li><a href="#" onclick="showPage('projects')">Projects</a></li>
-                    <li><a href="#" onclick="showPage('contact')">Contact</a></li>
-                </ul>
-            </nav>
+            <h1>Alazu Mikel</h1>
+            <p>Web Developer & Technology Enthusiast</p>
         </header>
-
-        <main class="main-content">
-            <!-- Home Page -->
-            <div id="home" class="page">
-                <div class="hero">
-                    <div class="profile-photo">YN</div>
-                    <h1>mikel</h1>
-                    <p class="subtitle">Aspiring Web Developer & Creative Problem Solver</p>
-                </div>
-
-                <div class="section">
-                    <h2>Welcome to My Portfolio</h2>
-                    <p class="intro-text">
-                        Hello! I'm passionate about creating engaging digital experiences and solving problems through code. 
-                        This website represents my journey into web development, where I'm learning to combine creativity 
-                        with technical skills to build meaningful projects.
-                    </p>
-                    <p class="intro-text">
-                        I believe in continuous learning and am excited about the endless possibilities that programming offers. 
-                        From crafting user-friendly interfaces to implementing efficient solutions, I'm dedicated to growing 
-                        as a developer while contributing value to every project I work on.
-                    </p>
-                </div>
-
-                <div class="section">
-                    <h2>Current Focus</h2>
-                    <div class="skills-grid">
-                        <div class="skill-card">
-                            <h3>HTML & CSS</h3>
-                            <p>Building responsive and accessible web layouts</p>
-                        </div>
-                        <div class="skill-card">
-                            <h3>Problem Solving</h3>
-                            <p>Analytical thinking and creative solutions</p>
-                        </div>
-                        <div class="skill-card">
-                            <h3>Learning</h3>
-                            <p>Continuously expanding my technical knowledge</p>
-                        </div>
-                        <div class="skill-card">
-                            <h3>Design</h3>
-                            <p>Creating visually appealing user experiences</p>
-                        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <main>
+            <section id="about">
+                <h2>About Me</h2>
+                <p>Hello! I'm Mikel, a passionate web developer with a keen interest in creating engaging and user-friendly websites. I enjoy learning new technologies and applying them to solve real-world problems.</p>
+                <p>When I'm not coding, you can find me exploring new coffee shops, hiking local trails, or reading about the latest web development trends. I believe in continuous learning and always strive to improve my skills.</p>
+                <p>This website serves as my digital introduction and a place where I can showcase my journey in web development. I built it using HTML and CSS to practice layout design, styling techniques, and page navigation.</p>
+            </section>
+            
+            <section id="skills">
+                <h2>Skills & Interests</h2>
+                <div class="skills">
+                    <div class="skill-card">
+                        <h3>Frontend Development</h3>
+                        <p>HTML, CSS, and responsive design principles for creating modern web interfaces.</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Design</h3>
+                        <p>Understanding of color theory, typography, and user experience design fundamentals.</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Problem Solving</h3>
+                        <p>Analytical thinking and creative approaches to overcome technical challenges.</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Learning</h3>
+                        <p>Constantly exploring new technologies and staying updated with industry trends.</p>
                     </div>
                 </div>
-            </div>
-
-            <!-- About Page -->
-            <div id="about" class="page hidden-page">
-                <div class="section">
-                    <h2>About Me</h2>
-                    <p class="intro-text">
-                        I'm a motivated individual who recently discovered my passion for web development. While I'm still 
-                        early in my programming journey, I bring enthusiasm, dedication, and a strong willingness to learn 
-                        to every challenge I encounter.
-                    </p>
-                    <p class="intro-text">
-                        My background has taught me the importance of attention to detail, effective communication, and 
-                        perseverance when facing new challenges. These skills translate well into programming, where 
-                        precision and problem-solving are essential.
-                    </p>
-                    <p class="intro-text">
-                        I'm particularly interested in front-end development and user experience design. I enjoy the process 
-                        of turning ideas into interactive, visually appealing websites that people can actually use and enjoy.
-                    </p>
-                </div>
-
-                <div class="section">
-                    <h2>My Approach</h2>
-                    <div class="skills-grid">
-                        <div class="skill-card">
-                            <h3>Growth Mindset</h3>
-                            <p>Always eager to learn new technologies and improve my skills</p>
-                        </div>
-                        <div class="skill-card">
-                            <h3>Attention to Detail</h3>
-                            <p>Focusing on clean, well-structured code and design</p>
-                        </div>
-                        <div class="skill-card">
-                            <h3>User-Centered</h3>
-                            <p>Prioritizing user experience in every project</p>
-                        </div>
-                        <div class="skill-card">
-                            <h3>Collaborative</h3>
-                            <p>Working well with others and communicating effectively</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Projects Page -->
-            <div id="projects" class="page hidden-page">
-                <div class="section">
-                    <h2>My Projects</h2>
-                    <p class="intro-text">
-                        Here are some of the projects I've been working on as I develop my programming skills. 
-                        Each project represents a step forward in my learning journey.
-                    </p>
-                </div>
-
-                <div class="section">
-                    <h2>Personal Portfolio Website</h2>
-                    <p class="intro-text">
-                        This very website you're viewing! Built with HTML and CSS, it demonstrates my understanding of:
-                    </p>
-                    <div class="skills-grid">
-                        <div class="skill-card">
-                            <h3>Responsive Design</h3>
-                            <p>Adapts to different screen sizes and devices</p>
-                        </div>
-                        <div class="skill-card">
-                            <h3>CSS Styling</h3>
-                            <p>Custom styling with gradients, animations, and layouts</p>
-                        </div>
-                        <div class="skill-card">
-                            <h3>Page Navigation</h3>
-                            <p>Interactive navigation between different sections</p>
-                        </div>
-                        <div class="skill-card">
-                            <h3>User Experience</h3>
-                            <p>Clean, intuitive interface design</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="section">
-                    <h2>Future Projects</h2>
-                    <p class="intro-text">
-                        I'm excited to expand my portfolio with more challenging projects as I continue learning. 
-                        My next goals include building interactive web applications and exploring JavaScript frameworks.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Contact Page -->
-            <div id="contact" class="page hidden-page">
-                <div class="section">
-                    <h2>Get In Touch</h2>
-                    <p class="intro-text">
-                        I'm always interested in connecting with fellow developers, potential collaborators, or anyone 
-                        who shares a passion for web development and technology.
-                    </p>
-                </div>
-
+            </section>
+            
+            <section id="projects">
+                <h2>Projects</h2>
+                <p>This personal website is my first major project, where I've applied HTML and CSS concepts to create a responsive and visually appealing interface. Through this project, I've learned about:</p>
+                <ul style="margin-left: 20px; margin-top: 15px;">
+                    <li style="margin-bottom: 10px;"><strong>Layout Design:</strong> Using CSS Grid and Flexbox for responsive layouts</li>
+                    <li style="margin-bottom: 10px;"><strong>Styling:</strong> Implementing gradients, transitions, and hover effects</li>
+                    <li style="margin-bottom: 10px;"><strong>Navigation:</strong> Creating smooth scrolling navigation links</li>
+                    <li style="margin-bottom: 10px;"><strong>Responsiveness:</strong> Ensuring the site works well on different screen sizes</li>
+                </ul>
+            </section>
+            
+            <section id="contact">
+                <h2>Contact Me</h2>
                 <div class="contact-info">
-                    <h3>Let's Connect</h3>
+                    <h3>Let's Connect!</h3>
+                    <p>I'm always interested in connecting with fellow developers and learning about new opportunities.</p>
                     <div class="contact-links">
-                        <a href="mailto:your.email@example.com">Email Me</a>
-                        <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-                        <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-                        <a href="tel:+1234567890">Call Me</a>
+                        <a href="mailto:mikealazu@gmail.com">Email Me</a>
+                        <a href="https://linkedin.com/in/luismikel" target="_blank">LinkedIn</a>
+                        <a href="https://github.com/luigi1D1" target="_blank">GitHub</a>
+                        <a href="https://twitter.com/_luig1" target="_blank">Twitter</a>
                     </div>
-                    <p style="margin-top: 20px;">
-                        Feel free to reach out if you'd like to discuss web development, potential opportunities, 
-                        or just want to chat about technology!
-                    </p>
                 </div>
-            </div>
+            </section>
         </main>
+        
+        <footer>
+            <p>&copy; 2025 Alazu Mikel. Built with HTML & CSS.</p>
+        </footer>
     </div>
-
+    
     <script>
-        function showPage(pageId) {
-            // Hide all pages
-            const pages = document.querySelectorAll('.page');
-            pages.forEach(page => {
-                page.classList.remove('show-page');
-                page.classList.add('hidden-page');
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             });
-
-            // Show selected page
-            const selectedPage = document.getElementById(pageId);
-            if (selectedPage) {
-                selectedPage.classList.remove('hidden-page');
-                selectedPage.classList.add('show-page');
-            }
-        }
-
-        // Show home page by default
-        document.addEventListener('DOMContentLoaded', function() {
-            showPage('home');
+        });
+        
+        // Add some interactivity to skill cards
+        document.querySelectorAll('.skill-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.borderLeftColor = '#e74c3c';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.borderLeftColor = '#3498db';
+            });
         });
     </script>
 </body>
